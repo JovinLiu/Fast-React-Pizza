@@ -25,7 +25,7 @@ function UpdateQuantity({ id }) {
   }
 
   return (
-    <div className="xxxs:gap-2 xxs:gap-4 flex items-center gap-6">
+    <div className="xxxs:gap-2 xxs:gap-4 xxxs:items-center flex items-center gap-6">
       <div className="xxxs:gap-0.5 xxs:gap-1 flex items-center gap-2">
         <LinkButton type="round" onClick={handleClickDecrease}>
           -

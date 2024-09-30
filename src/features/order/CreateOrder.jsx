@@ -52,7 +52,7 @@ function CreateOrder() {
       <Form
         method="POST"
         action="/order/new"
-        className="mt-10 flex flex-col gap-14"
+        className="mt-10 flex flex-col gap-10"
       >
         <div className="xxxs:flex-col xxs:flex-row xxxs:items-start xxs:items-center flex">
           <label className={formLabel}>First Name</label>
@@ -96,7 +96,7 @@ function CreateOrder() {
               className={inputBarStyle}
             />
             {status === "error" && <span className={formError}>{error}</span>}
-            <div className="xxxs:mt-5 xxs:mt-0 xxxs:mr-2 absolute right-0 top-0">
+            <div className="xxxs:mt-5 xxs:mt-0 xxxs:mr-0 absolute right-0 top-0">
               {!position.latitude && !position.longitude && (
                 <LinkButton
                   condition={isLoadingAddress || isSubmitting}
