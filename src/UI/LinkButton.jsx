@@ -10,17 +10,17 @@ function LinkButton({ children, type, to, onClick, condition = false }) {
 
   const styles = {
     primary:
-      "md:py-3 py-2 md:px-5 px-3 bg-yellow-400 hover:bg-yellow-200 font-semibold text-sm" +
+      "md:py-3 py-2 md:px-5 px-3 bg-yellow-400 hover:bg-yellow-200 font-semibold text-sm xxxs:text-[0.8rem] xxxs:mr-2" +
       baseStyles,
     secondary:
-      "md:py-2 py-1.5 md:px-4 px-2 bg-yellow-400 hover:bg-yellow-200 text-sm font-semibold" +
+      "xxxs:text-[0.5rem] md:py-2 py-1.5 md:px-4 px-2 bg-yellow-400 hover:bg-yellow-200 text-sm font-semibold" +
       baseStyles,
     link: "text-md text-blue-500 hover:text-blue-600 hover:underline",
     round:
-      "bg-yellow-400 hover:bg-yellow-200 text-sm font-semibold md:h-9 h-8 md:w-9 w-8" +
+      "xxxs:text-[0.6rem] bg-yellow-400 hover:bg-yellow-200 text-sm font-semibold md:h-9 h-8 md:w-9 w-8" +
       baseStyles,
     orangeRed:
-      "py-2 px-4 sm:py-2 sm:py-5 bg-red-700 text-sm sm:text-md md:text-lg hover:bg-orange-600" +
+      "py-2 px-4 sm:px-2 sm:py-3 bg-red-700 text-sm sm:text-md md:text-lg hover:bg-orange-600" +
       baseStyles,
     lightGrey:
       "md:py-3 py-2 md:px-5 px-3 ring ring-inset ring-2 ring-gray-300 hover:bg-gray-300 font-semibold text-gray-500 text-sm" +

@@ -12,7 +12,7 @@ function AppLayout() {
       {isLoading ? <Loader /> : ""}
       <Header />
       <div className="overflow-x-hidden overflow-y-scroll">
-        <main className="m-[0_auto] w-[40rem] md:w-[48rem] lg:w-[56rem]">
+        <main className="xs:w-[35rem] xxs:w-[26rem] xxxs:w-[24rem] m-[0_auto] sm:w-[40rem] md:w-[45rem] lg:w-[56rem]">
           <Outlet />
         </main>
       </div>

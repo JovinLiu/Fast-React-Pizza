@@ -35,7 +35,7 @@ function Order() {
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
   return (
-    <div className="px-4 sm:px-2 lg:px-2">
+    <div className="xs:px-2 xxs:px-2 px-4 sm:px-2 lg:px-2">
       <div className="mt-10 flex items-center gap-3 ">
         <h2 className="text-lg font-semibold md:text-2xl">
           Order #{id} Status
@@ -47,8 +47,8 @@ function Order() {
             </span>
           )}
         </div>
-        <span className="md:text-md rounded-full bg-green-500 px-2 py-1 text-sm font-semibold uppercase text-green-100">
-          {status} order
+        <span className="md:text-md mt-[0.1rem] rounded-full bg-green-500 px-2 py-1 text-sm font-semibold uppercase text-green-100">
+          {status}
         </span>
       </div>
 

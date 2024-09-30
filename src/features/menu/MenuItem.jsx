@@ -29,13 +29,15 @@ function MenuItem({ pizza }) {
         className={`h-32 p-2 ${soldOut ? "opacity-70 grayscale" : ""}`}
       />
       <div className="flex flex-col gap-1 p-3">
-        <p className="md:text-md text-sm font-bold lg:text-lg">{name}</p>
-        <p className="w-[12rem] text-wrap text-xs font-light italic text-stone-500 sm:w-[15rem] md:w-[20rem] md:text-sm lg:w-[30rem]">
+        <p className="xxxs:text-[0.7rem] xxs:text-[0.8rem] md:text-md text-sm font-bold lg:text-lg">
+          {name}
+        </p>
+        <p className="xs:w-[10rem] xs:text-xs xxs:text-[0.6rem] xxxs:text-[0.6rem] xxs:w-[8rem] xxxs:w-[5rem] w-[12rem] text-wrap text-xs font-light italic text-stone-500 sm:w-[15rem] md:w-[20rem] md:text-sm lg:w-[30rem]">
           {ingredients.join(", ")}
         </p>
         <div className="mt-[auto] font-normal">
           {!soldOut ? (
-            <p className="sm:text-md md:text-md inline-block bg-yellow-200 p-1 text-sm">
+            <p className="xs:text-xs xxs:text-[0.6rem] xxxs:text-[0.5rem] sm:text-md md:text-md inline-block bg-yellow-200 p-1 text-sm">
               {formatCurrency(unitPrice)}
             </p>
           ) : (

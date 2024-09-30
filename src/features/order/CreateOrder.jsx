@@ -34,7 +34,7 @@ function CreateOrder() {
   const formLabel = "text-md md:text-lg";
 
   const inputBarStyle =
-    "h-9 md:h-11 w-[25rem] sm:w-[28rem] md:w-[35rem] lg:w-[42rem] rounded-full focus:outline-none focus:ring focus:ring-yellow-500 focus:ring-opacity-70 px-5 py-2 text-md border-2";
+    "h-9 md:h-11 w-[25rem] xxxs:w-[18rem] xxxs:mr-2 xxxs:mt-5 xxs:mt-0 sm:w-[28rem] md:w-[35rem] lg:w-[42rem] rounded-full focus:outline-none focus:ring focus:ring-yellow-500 focus:ring-opacity-70 px-5 py-2 text-md border-2";
 
   const formError =
     "absolute right-0 top-10 md:top-12 lg:top-14 w-[25rem] sm:w-[28rem] md:w-[35rem] lg:w-[42rem] rounded-lg bg-red-200 p-0.5 xl:p1.5 text-xs md:text-sm text-red-800";
@@ -54,7 +54,7 @@ function CreateOrder() {
         action="/order/new"
         className="mt-10 flex flex-col gap-14"
       >
-        <div className="flex items-center">
+        <div className="xxxs:flex-col xxs:flex-row xxxs:items-start xxs:items-center flex">
           <label className={formLabel}>First Name</label>
           <div className="ml-[auto] ">
             <input
@@ -68,7 +68,7 @@ function CreateOrder() {
           </div>
         </div>
 
-        <div className="relative flex items-center">
+        <div className="xxxs:flex-col xxs:flex-row xxxs:items-start xxs:items-center relative flex items-center ">
           <label className={formLabel}>Phone number</label>
           <div className="ml-[auto] flex flex-col">
             <input
@@ -84,7 +84,7 @@ function CreateOrder() {
           )}
         </div>
 
-        <div className="flex items-center">
+        <div className="xxxs:flex-col xxs:flex-row xxxs:items-start xxs:items-center flex items-center ">
           <label className={formLabel}>Address</label>
           <div className="relative ml-[auto]">
             <input
@@ -96,7 +96,7 @@ function CreateOrder() {
               className={inputBarStyle}
             />
             {status === "error" && <span className={formError}>{error}</span>}
-            <div className="absolute right-0 top-0">
+            <div className="xxxs:mt-5 xxs:mt-0 xxxs:mr-2 absolute right-0 top-0">
               {!position.latitude && !position.longitude && (
                 <LinkButton
                   condition={isLoadingAddress || isSubmitting}
@@ -110,7 +110,7 @@ function CreateOrder() {
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 ">
           <input
             className="h-6 w-6 accent-yellow-500 focus:outline-none focus:ring focus:ring-yellow-400 focus:ring-offset-2"
             type="checkbox"

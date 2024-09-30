@@ -20,7 +20,9 @@ function CreateUser() {
 
   return (
     <form onSubmit={handleUpdateName} className="space-y-7">
-      <p>👋 Welcome! Please start by telling us your name:</p>
+      <p className="xs:text-md">
+        👋 Welcome! Please start by telling us your name:
+      </p>
 
       <input
         type="text"
