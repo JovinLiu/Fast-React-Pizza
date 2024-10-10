@@ -22,39 +22,43 @@ function MenuItem({ pizza }) {
   }
 
   return (
-    <li className="relative flex items-center">
+    <li className="relative flex items-start">
       <img
         src={imageUrl}
         alt={name}
         className={`h-32 p-2 ${soldOut ? "opacity-70 grayscale" : ""}`}
       />
-      <div className="flex flex-col gap-1 p-2">
-        <p className="xxxs:text-[0.8rem] xxs:text-[0.8rem] md:text-md text-sm font-bold lg:text-lg">
-          {name}
-        </p>
-        <p className="xs:w-[10rem] xs:text-xs xxs:text-[0.6rem] xxxs:text-[0.6rem] xxs:w-[8rem] xxxs:w-[5rem] w-[12rem] text-wrap text-xs font-light italic text-stone-500 sm:w-[15rem] md:w-[20rem] md:text-sm lg:w-[30rem]">
+      <div className="flex flex-col gap-1 p-1">
+        <div className="flex flex-row items-center gap-2">
+          <p className="md:text-md text-sm font-bold xxxs:text-[0.8rem] xxs:text-[0.8rem] lg:text-lg">
+            {name}
+          </p>
+          <div className="mt-[auto] font-normal">
+            {!soldOut ? (
+              <p className="sm:text-md inline-block bg-yellow-200 p-1 text-sm xxxs:text-[0.6rem] xxs:text-[0.8rem] xs:text-xs md:text-lg">
+                {formatCurrency(unitPrice)}
+              </p>
+            ) : (
+              <p className="sm:text-md md:text-md inline-block bg-gray-200 p-1 text-sm xxxs:text-[0.5rem] xxs:text-[0.6rem] xs:text-xs">
+                Sold out
+              </p>
+            )}
+          </div>
+        </div>
+        <p className="w-[12rem] text-wrap text-xs font-light italic text-stone-500 xxxs:w-[5rem] xxxs:text-[0.6rem] xxs:w-[8rem] xxs:text-[0.6rem] xs:w-[10rem] xs:text-xs sm:w-[15rem] md:w-[20rem] md:text-sm lg:w-[30rem]">
           {ingredients.join(", ")}
         </p>
-        <div className="mt-[auto] font-normal">
-          {!soldOut ? (
-            <p className="xs:text-xs xxs:text-[0.6rem] xxxs:text-[0.5rem] sm:text-md md:text-md inline-block bg-yellow-200 p-1 text-sm">
-              {formatCurrency(unitPrice)}
-            </p>
-          ) : (
-            <p className="sm:text-md md:text-md xs:text-xs xxs:text-[0.6rem] xxxs:text-[0.5rem] inline-block bg-gray-200 p-1 text-sm">
-              Sold out
-            </p>
-          )}
-        </div>
       </div>
-      <div className="xxxs:absolute xxxs: xxxs: bottom-0 right-0 mb-4 ml-[auto] mr-5 mt-[auto]">
+      <div className="xxxs: bottom-0 right-0 mb-4 ml-[auto] mr-5 mt-[auto] xxxs:absolute">
         {soldOut ? (
           ""
         ) : cart.some((item) => item.pizzaId === id) ? (
           <UpdateQuantity id={id} />
         ) : (
           <LinkButton type="secondary" onClick={handleClickAddItem}>
-            Add to Cart
+            <span className="text-md sm:text-md xxxs:text-[0.7rem] xxs:text-[0.8rem]">
+              Add to Cart
+            </span>
           </LinkButton>
         )}
       </div>
