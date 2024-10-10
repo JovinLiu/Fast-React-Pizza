@@ -31,7 +31,7 @@ function Cart() {
           <CartItem item={item} key={item.pizzaId} />
         ))}
       </ul>
-      <div className="mr-4 mt-3 flex items-center gap-5 sm:mr-2 md:mt-5">
+      <div className="mr-4 mt-3 flex items-center gap-5 xxxs:mr-1 sm:mr-2 md:mt-5">
         <div className="ml-[auto]">
           <LinkButton type="lightGrey" onClick={handleClickClearCart}>
             Clear cart
