@@ -52,9 +52,9 @@ function CreateOrder() {
       <Form
         method="POST"
         action="/order/new"
-        className="mt-10 flex flex-col gap-10"
+        className="mt-10 flex flex-col gap-4"
       >
-        <div className="xxxs:flex-col xxs:flex-row xxxs:items-start xxs:items-center flex">
+        <div className="flex xxxs:flex-col xxxs:items-start xxs:flex-row xxs:items-center">
           <label className={formLabel}>First Name</label>
           <div className="ml-[auto] ">
             <input
@@ -68,7 +68,7 @@ function CreateOrder() {
           </div>
         </div>
 
-        <div className="xxxs:flex-col xxs:flex-row xxxs:items-start xxs:items-center relative flex items-center ">
+        <div className="relative flex items-center xxxs:flex-col xxxs:items-start xxs:flex-row xxs:items-center ">
           <label className={formLabel}>Phone number</label>
           <div className="ml-[auto] flex flex-col">
             <input
@@ -84,7 +84,7 @@ function CreateOrder() {
           )}
         </div>
 
-        <div className="xxxs:flex-col xxs:flex-row xxxs:items-start xxs:items-center flex items-center ">
+        <div className="flex items-center xxxs:flex-col xxxs:items-start xxs:flex-row xxs:items-center ">
           <label className={formLabel}>Address</label>
           <div className="relative ml-[auto]">
             <input
@@ -96,7 +96,7 @@ function CreateOrder() {
               className={inputBarStyle}
             />
             {status === "error" && <span className={formError}>{error}</span>}
-            <div className="xxxs:mt-5 xxs:mt-0 xxxs:mr-0 absolute right-0 top-0">
+            <div className="absolute right-0 top-0 xxxs:mr-0 xxxs:mt-5 xxs:mt-0">
               {!position.latitude && !position.longitude && (
                 <LinkButton
                   condition={isLoadingAddress || isSubmitting}
@@ -110,19 +110,21 @@ function CreateOrder() {
           </div>
         </div>
 
-        <div className="flex items-center gap-3 ">
-          <input
-            className="h-6 w-6 accent-yellow-500 focus:outline-none focus:ring focus:ring-yellow-400 focus:ring-offset-2"
-            type="checkbox"
-            name="priority"
-            id="priority"
-            value="true"
-            disabled={isSubmitting}
-            onChange={(e) => setWithPriority(e.target.checked)}
-          />
-          <label htmlFor="priority" className="sm:text-md text-sm">
-            Want to yo give your order priority?
-          </label>
+        <div className="flex items-center gap-3 xxxs:flex-col sm:flex-row">
+          <div className="mr-auto flex items-center gap-3">
+            <input
+              className="h-6 w-6 accent-yellow-500 focus:outline-none focus:ring focus:ring-yellow-400 focus:ring-offset-2"
+              type="checkbox"
+              name="priority"
+              id="priority"
+              value="true"
+              disabled={isSubmitting}
+              onChange={(e) => setWithPriority(e.target.checked)}
+            />
+            <label htmlFor="priority" className="sm:text-md text-sm">
+              Want to yo give your order priority?
+            </label>
+          </div>
           <div className="ml-[auto]">
             <LinkButton
               type="primary"

@@ -17,7 +17,7 @@ function SearchInput() {
       <input
         placeholder="Search Order #"
         onChange={(e) => setQuery(e.target.value)}
-        className="h-7 w-32 rounded-full bg-yellow-100 px-5 py-2 text-sm transition-all duration-300 placeholder:text-stone-400 focus:outline-none focus:ring focus:ring-yellow-500 focus:ring-opacity-70 sm:h-8 sm:w-40 md:h-10 md:w-60"
+        className="h-7 w-40 rounded-full bg-yellow-100 px-5 py-2 text-sm transition-all duration-300 placeholder:text-stone-400 focus:outline-none focus:ring focus:ring-yellow-500 focus:ring-opacity-70 sm:h-8 sm:w-40 md:h-10 md:w-60"
       />
     </form>
   );
