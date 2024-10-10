@@ -25,12 +25,12 @@ function UpdateQuantity({ id }) {
   }
 
   return (
-    <div className="xxxs:gap-2 xxs:gap-4 xxxs:items-center flex items-center gap-6">
-      <div className="xxxs:gap-0.5 xxs:gap-1 flex items-center gap-2">
+    <div className="flex items-center gap-6 xxxs:items-center xxxs:gap-4 xxs:gap-4">
+      <div className="flex items-center gap-2 xxxs:gap-2 xxs:gap-2">
         <LinkButton type="round" onClick={handleClickDecrease}>
           -
         </LinkButton>
-        <span className="xxxs:text-[0.6rem] xxs:text-[0.8rem] font-bold">
+        <span className="font-bold xxxs:text-[0.6rem] xxs:text-[0.8rem]">
           {currentQuantity}
         </span>
         <LinkButton type="round" onClick={handleClickIncrease}>

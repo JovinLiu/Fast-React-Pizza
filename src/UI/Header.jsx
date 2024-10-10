@@ -13,8 +13,8 @@ function Header() {
         Fast React Pizza Co.
       </Link>
       <div className="ml-auto flex xxxs:flex-col xxxs:items-end xxs:flex-row xxs:items-center xxs:gap-3">
-        <Username />
         <SearchInput />
+        <Username />
       </div>
     </header>
   );
