@@ -9,7 +9,7 @@ function Home() {
     <>
       <div className="z-10 my-10 px-4 text-center sm:my-16">
         <h1 className="space-y-10 py-12">
-          <p className="xs:text-2xl text-center text-4xl font-semibold uppercase text-stone-800 ">
+          <p className="text-center text-3xl font-semibold uppercase text-stone-800 xs:text-3xl sm:text-4xl md:text-4xl ">
             The best pizza
           </p>
           <p className="xs:text-md text-center text-xl font-bold text-yellow-500">
