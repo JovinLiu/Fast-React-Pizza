@@ -14,8 +14,6 @@ function Order() {
 
   const fetcher = useFetcher();
 
-  console.log(fetcher);
-
   useEffect(
     function () {
       if (!fetcher.data && fetcher.state === "idle") fetcher.load("/menu");
@@ -35,21 +33,21 @@ function Order() {
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
   return (
-    <div className="xs:px-2 xxs:px-2 px-4 sm:px-2 lg:px-2">
+    <div className="px-4 xxs:px-2 xs:px-2 sm:px-2 lg:px-2">
       <div className="mt-10 flex items-center gap-3 ">
         <h2 className="text-lg font-semibold md:text-2xl">
           Order #{id} Status
         </h2>
-        <div className="ml-[auto]">
+        <div className="ml-[auto] flex items-center gap-2">
           {priority && (
             <span className="md:text-md rounded-full bg-red-500 px-2 py-1 text-sm font-semibold uppercase text-red-100">
               Priority
             </span>
           )}
+          <span className="md:text-md rounded-full bg-green-500 px-2 py-1 text-sm font-semibold uppercase text-green-100">
+            {status}
+          </span>
         </div>
-        <span className="md:text-md mt-[0.1rem] rounded-full bg-green-500 px-2 py-1 text-sm font-semibold uppercase text-green-100">
-          {status}
-        </span>
       </div>
 
       <div className="md:text-md mt-10 flex w-full justify-between bg-gray-200 p-4 text-sm">

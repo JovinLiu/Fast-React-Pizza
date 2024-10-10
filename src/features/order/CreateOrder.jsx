@@ -130,9 +130,11 @@ function CreateOrder() {
               type="primary"
               condition={isLoadingAddress || isSubmitting}
             >
-              {isSubmitting
-                ? "Placing Order"
-                : `Order now for ${formatCurrency(finalPrice)}`}
+              <span>
+                {isSubmitting
+                  ? "Placing Order"
+                  : `Order now for ${formatCurrency(finalPrice)}`}
+              </span>
             </LinkButton>
           </div>
         </div>

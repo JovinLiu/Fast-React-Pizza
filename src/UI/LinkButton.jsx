@@ -6,7 +6,7 @@ function LinkButton({ children, type, to, onClick, condition = false }) {
   const baseStyles = " rounded-full uppercase transition-all duration-300";
 
   const buttonDisabled =
-    "md:py-3 py-2 md:px-5 px-3 text-sm text-slate-500 bg-slate-300 hover:bg-slate-300 rounded-full uppercase";
+    "md:py-3 py-2 md:px-5 px-3 mr-2 text-sm text-slate-500 bg-slate-300 hover:bg-slate-300 rounded-full uppercase";
 
   const styles = {
     primary:
